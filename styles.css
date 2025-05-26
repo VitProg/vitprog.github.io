@@ -1,0 +1,337 @@
+/* Modern Portfolio Styles */
+:root {
+  --primary-color: #0a192f;
+  --secondary-color: #112240;
+  --accent-color: #64ffda;
+  --text-primary: #e6f1ff;
+  --text-secondary: #8892b0;
+  --gradient-start: #1a365d;
+  --gradient-end: #0a192f;
+  --transition: all 0.3s ease;
+  --transition-linear: all 0.1s linear;
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.avatar-container {
+  margin: 0 auto 1.5rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+  transition: var(--transition);
+}
+
+.avatar-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(100, 255, 218, 0.5);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, var(--accent-color), #4db6ac);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+header p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.job-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.tech {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.links a:hover {
+  color: var(--accent-color);
+}
+
+.links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: var(--transition);
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+main {
+  padding: 4rem 0;
+}
+
+section {
+  margin-bottom: 5rem;
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+  border-left: 3px solid var(--accent-color);
+}
+
+section.experience {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-left: none;
+}
+
+section.experience:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+section:not(.experience):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(to right, var(--accent-color), transparent);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 0.5rem;
+  color: var(--text-primary);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.8rem;
+  color: var(--text-secondary);
+  position: relative;
+  list-style: none;
+}
+
+ul li::before {
+  content: '▹';
+  position: absolute;
+  left: -1.5rem;
+  color: var(--accent-color);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Experience section styles */
+.experience-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item {
+  position: relative;
+  transition: var(--transition-linear);
+  /* Removed opacity and transform defaults - will be controlled by JavaScript */
+  /* Removed transitions - will use direct scroll-based positioning */
+}
+
+/* Removed .visible and .hidden-top classes - will use inline styles instead */
+
+/* For items that are transitioning in/out based on scroll position */
+.experience-item.transitioning {
+  /* No specific styles here - will be controlled by JavaScript */
+}
+
+.experience-content {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-left: 3px solid var(--accent-color);
+  transition: var(--transition);
+}
+
+.experience-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  font-size: 1.4rem;
+}
+
+.experience-content:hover {
+  /*transform: translateY(-5px);*/
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills section styles */
+.skills-content {
+  padding: 1.5rem;
+}
+
+.skills-list li {
+  margin-bottom: 1rem;
+}
+
+.skills-list li strong {
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+}
+
+/* Languages section styles */
+.languages-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.languages-content p {
+  margin-bottom: 0;
+  color: var(--text-secondary);
+}
+
+/* About section styles */
+.about-content {
+  padding: 1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .avatar-container {
+    width: 130px;
+    height: 130px;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .avatar-container {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
