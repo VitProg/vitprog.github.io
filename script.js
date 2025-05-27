@@ -1,7 +1,8 @@
 // Grid and Wave Animation
 document.addEventListener('DOMContentLoaded', function() {
   // Constants for animation and effects
-  const MOVE_THROTTLE_MS = 10; // ms between mouse move updates
+  const GRID_CELL_SIZE = 64; // Fixed grid cell size as requested
+  const MOVE_THROTTLE_MS = 20; // ms between mouse move updates
   const CURSOR_INFLUENCE_RADIUS = 175; // px - radius of cursor influence
   const CURSOR_INFLUENCE_RADIUS_SQUARED = CURSOR_INFLUENCE_RADIUS * CURSOR_INFLUENCE_RADIUS; // Pre-calculated for performance
   const CURSOR_ATTRACTION_STRENGTH = 25; // Strength of cursor attraction
@@ -66,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Grid configuration
-  const GRID_CELL_SIZE = 64; // Fixed grid cell size as requested
   const gridConfig = {
     spacing: GRID_CELL_SIZE, // Fixed grid cell size
     pointSize: 1.5, // Slightly smaller points
