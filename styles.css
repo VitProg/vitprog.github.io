@@ -219,7 +219,7 @@ ul li::before {
 footer {
   text-align: center;
   padding: 2rem 0;
-  margin-top: 2rem;
+  /*margin-top: 2rem;*/
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
@@ -281,6 +281,9 @@ footer {
 }
 
 /* Languages section styles */
+.languages.experience-item {
+  margin-bottom: 0;
+}
 .languages-content {
   padding: 1.5rem;
   text-align: center;
