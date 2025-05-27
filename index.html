@@ -35,6 +35,95 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="CV Viktor Zhokhov" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vitprog.github.io/" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content="Viktor Zhokhov, Fullstack Engineer, React, Node.js, NestJS, TypeScript, Frontend Engineer, Software Engineer, Web Developer" />
+    <meta name="author" content="Viktor Zhokhov" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- JSON-LD Structured Data for Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Viktor Zhokhov",
+      "jobTitle": "Senior Fullstack Engineer",
+      "url": "https://vitprog.github.io/",
+      "sameAs": [
+        "https://www.linkedin.com/in/viktor-zhokhov",
+        "https://github.com/VitProg"
+      ],
+      "knowsAbout": ["React", "Node.js", "NestJS", "TypeScript", "Frontend Development", "Backend Development", "System Architecture"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "KIVORK"
+      },
+      "image": "https://vitprog.github.io/foto1.jpg",
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Fullstack Engineer",
+        "occupationLocation": { "@type": "Place", "name": "Remote" },
+        "skills": "React, Next.js, Node.js, NestJS, TypeScript, MongoDB, PostgreSQL, Docker, Kubernetes"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data for Resume -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WorkExperience",
+            "name": "Lead Frontend Engineer / System Architect",
+            "organization": {
+              "@type": "Organization",
+              "name": "KIVORK"
+            },
+            "startDate": "2023-04",
+            "description": "Built and led a frontend team to develop a modular OTA platform for 30+ travel brands. Focused on high scalability, fault tolerance, and business-aligned delivery."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WorkExperience",
+            "name": "Team Lead / Senior Fullstack Engineer",
+            "organization": {
+              "@type": "Organization",
+              "name": "Leroy Merlin"
+            },
+            "startDate": "2021-07",
+            "endDate": "2023-03",
+            "description": "Led core team building a performance-first microfrontend framework for internal tools, driving delivery speed and business consistency."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "WorkExperience",
+            "name": "Senior Frontend Engineer",
+            "organization": {
+              "@type": "Organization",
+              "name": "eLama"
+            },
+            "startDate": "2020-09",
+            "endDate": "2021-04",
+            "description": "Led frontend architecture improvements for analytics tools during platform scale-up - focused on performance, UX, and sustainable feature delivery."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div id="canvas-container">
@@ -44,16 +133,16 @@
     <div class="container">
         <header>
             <div class="avatar-container">
-                <img src="foto1.jpg" alt="Viktor Zhokhov" class="avatar">
+                <img src="foto1.jpg" alt="Viktor Zhokhov - Senior Fullstack Engineer specializing in React, Node.js, and TypeScript" class="avatar">
             </div>
             <h1>Viktor Zhokhov</h1>
             <p class="job-title">Senior Fullstack Engineer</p>
             <p class="tech">React · Node.js · NestJS · TypeScript</p>
             <nav class="links">
-                <a href="https://www.linkedin.com/in/viktor-zhokhov" target="_blank">LinkedIn</a>
-                <a href="https://github.com/VitProg" target="_blank">GitHub</a>
-                <a href="mailto:vikbite@gmail.com">Email</a>
-                <a href="https://t.me/vitprog" target="_blank">Telegram</a>
+                <a href="https://www.linkedin.com/in/viktor-zhokhov" target="_blank" rel="noopener noreferrer external">LinkedIn</a>
+                <a href="https://github.com/VitProg" target="_blank" rel="noopener noreferrer external">GitHub</a>
+                <a href="mailto:vikbite@gmail.com" rel="nofollow">Email</a>
+                <a href="https://t.me/vitprog" target="_blank" rel="noopener noreferrer external">Telegram</a>
             </nav>
         </header>
 
@@ -70,6 +159,11 @@
                     <p>
                         Designs high-performance systems by transforming complex business requirements into maintainable, high-impact solutions – with strong focus on scalability, efficiency, and stakeholder alignment.
                     </p>
+                    <div class="cv-download">
+                        <a href="Viktor_Zhokhov__Senior_Fullstack_Engineer.pdf" download class="cv-download-link" target="_blank" rel="noopener">
+                            <span class="cv-icon">📄</span> Download CV
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -189,13 +283,13 @@
             <section class="languages experience-item">
                 <h2>Languages</h2>
                 <div class="languages-content">
-                    <p>English • Spanish • Russian</p>
+                    <p><span lang="en">English</span> • <span lang="es">Spanish</span> • <span lang="ru">Russian</span></p>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; <span id="year"></span> Viktor Zhokhov</p>
+            <p>&copy; <span id="year">2025</span> Viktor Zhokhov</p>
         </footer>
     </div>
 

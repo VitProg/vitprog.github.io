@@ -219,7 +219,7 @@ ul li::before {
 footer {
   text-align: center;
   padding: 2rem 0;
-  margin-top: 4rem;
+  margin-top: 2rem;
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
@@ -296,6 +296,37 @@ footer {
   padding: 1.5rem;
 }
 
+.cv-download {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cv-download-link {
+  display: inline-block;
+
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(100, 255, 218, 0.2);
+  border: 1px solid var(--accent-color);
+
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+.cv-download-link:hover {
+
+  background-color: color-mix(in lch, var(--accent-color), transparent 90%);
+  /*color: var(--primary-color);*/
+  box-shadow: 0 6px 15px color-mix(in lch, var(--accent-color), transparent 80%);
+}
+
+.cv-icon {
+  margin-right: 0.5rem;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   header h1 {
@@ -333,5 +364,10 @@ footer {
 
   section {
     padding: 1rem;
+  }
+
+  .cv-download-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
